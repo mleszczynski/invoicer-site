@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Invoicer privacy policy</title>
+<meta name="description" content="How Invoicer handles your data, including Google user data.">
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <header><a href="./"><img src="logo.svg" alt="Invoicer home"></a><h1>Privacy policy</h1></header>
+  <p class="muted">Effective 27 October 2026</p>
+
+  <p>Invoicer is a self-hosted invoicing application. It runs entirely on the
+    user's own computer. This policy explains what data Invoicer handles and how.</p>
+
+  <h2>No hosted service, no data collection</h2>
+  <p>Invoicer has no servers, accounts, analytics or tracking. The developer does not receive, collect or store
+    any data from people using Invoicer. Company details, customers, invoices, receipts and settings are stored
+    only in a local folder on the user's computer.</p>
+
+  <h2>Google user data</h2>
+  <p>If the user turns on Google Drive backup and connects their Google account, Invoicer requests a single
+    OAuth scope:</p>
+  <ul>
+    <li><code>https://www.googleapis.com/auth/drive.file</code>: create folders and files in the user's Google Drive,
+      and update files that Invoicer itself created.</li>
+  </ul>
+  <p>Invoicer uses this access only to upload copies of the user's own receipts and invoice PDFs to a folder in
+    their Drive, and to replace those copies when the local file changes. It cannot see, read, list or delete any
+    other files in the user's Drive, and it never deletes files in Drive.</p>
+  <p>The OAuth access token and refresh token are stored only on the user's computer, in the Invoicer data folder.
+    They are sent only to Google, to authenticate requests to the Google Drive API.</p>
+  <p>Google user data is not transferred to the developer or any third party, not used for advertising, not
+    used to train AI or machine-learning models, and not read by any person.</p>
+  <p>Invoicer's use and transfer of information received from Google APIs adheres to the
+    <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>,
+    including the Limited Use requirements.</p>
+
+  <h2>Other network connections</h2>
+  <ul>
+    <li><b>Email:</b> when the user sends an invoice, Invoicer connects to the mail server the user configured
+      (for example Gmail SMTP) and sends the message the user composed.</li>
+    <li><b>Exchange rates:</b> to convert receipt amounts, Invoicer requests public reference rates from
+      frankfurter.dev, sending only a currency code and a date.</li>
+  </ul>
+
+  <h2>Revoking access and deleting data</h2>
+  <p>Google Drive access can be revoked at any time with <b>Disconnect</b> in Invoicer's Settings, or at
+    <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>. Disconnecting deletes the
+    stored token. Files already copied to Drive belong to the user and can be deleted in Drive. All other data
+    can be deleted by deleting the local Invoicer data folder.</p>
+
+  <h2>Changes</h2>
+  <p>If this policy changes, the updated version will be published on this page with a new effective date.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about this policy can be raised at
+    <a href="https://github.com/mleszczynski/invoicer-site/issues">github.com/mleszczynski/invoicer-site/issues</a>.</p>
+
+  <footer><a href="./">Invoicer home</a></footer>
+</main>
+</body>
+</html>
